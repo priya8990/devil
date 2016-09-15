@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',        '5.0.0'
 gem 'bcrypt',         '3.1.11'
 gem 'bootstrap-sass', '3.3.6'
-gem 'puma',         '3.4.0'
+gem 'unicorn'
 gem 'faker',          '1.6.3'
 gem 'carrierwave',             '0.11.2'
 gem 'mini_magick',             '4.5.1'
@@ -26,11 +26,12 @@ group :development, :test do
 end
 
 group :development do
-    gem 'capistrano',         require: false
-    gem 'capistrano-rvm',     require: false
-    gem 'capistrano-rails',   require: false
-    gem 'capistrano-bundler', require: false
-    gem 'capistrano3-puma',   require: false
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails', '~> 1.1.3'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-nc', '~> 0.1'
+  gem 'capistrano-nginx-unicorn', '~> 0.1.0'
   gem 'web-console',           '3.1.1'
   gem 'listen',                '3.0.8'
   gem 'spring',                '1.7.1'
