@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',        '5.0.0'
 gem 'bcrypt',         '3.1.11'
 gem 'bootstrap-sass', '3.3.6'
+gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'unicorn'
 gem 'faker',          '1.6.3'
 gem 'carrierwave',             '0.11.2'
@@ -21,7 +22,7 @@ gem 'turbolinks',   '5.0.0'
 gem 'jbuilder',     '2.4.1'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.11'
+  # gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri
 end
 
