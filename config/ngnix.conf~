@@ -1,14 +1,14 @@
 upstream puma {
-  server unix:///home/deploy/apps/appname1/shared/tmp/sockets/appname1-puma.sock;
+  server unix:///home/demo/apps/devil/shared/tmp/sockets/devil-puma.sock;
 }
 
 server {
   listen 80 default_server deferred;
   # server_name example.com;
 
-  root /home/deploy/apps/appname1/current/public;
-  access_log /home/deploy/apps/appname1/current/log/nginx.access.log;
-  error_log /home/deploy/apps/appname1/current/log/nginx.error.log info;
+  root /home/demo/apps/devil/current/public;
+  access_log /home/demo/apps/devil/current/log/nginx.access.log;
+  error_log /home/demo/apps/devil/current/log/nginx.error.log info;
 
   location ^~ /assets/ {
     gzip_static on;
